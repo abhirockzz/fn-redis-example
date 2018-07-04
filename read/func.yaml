@@ -1,0 +1,8 @@
+name: read
+version: 0.0.10
+runtime: go
+entrypoint: ./func
+format: json
+config:
+  REDIS_HOST: 192.168.99.100
+  REDIS_PORT: "6379"

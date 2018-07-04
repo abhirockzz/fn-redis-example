@@ -1,0 +1,10 @@
+name: create
+version: 0.0.31
+runtime: java
+cmd: com.simplydistibuted.fn.RedisSetFunction::set
+build_image: fnproject/fn-java-fdk-build:jdk9-1.0.63
+run_image: fnproject/fn-java-fdk:jdk9-1.0.63
+format: http
+config:
+  REDIS_HOST: 192.168.99.100
+  REDIS_PORT: "6379"

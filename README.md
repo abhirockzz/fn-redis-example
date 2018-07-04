@@ -1,0 +1,11 @@
+- `fn start`
+- `export FN_API_URL=http://localhost:8080` //if you're using Docker Tools on Windows, this might be `http://192.168.99.100:8080`
+- start Redis `docker run -it --rm --name redis -p 6379:6379 redis`
+- update `config` section in `func.yaml` for `create` and `read` apps to specify Redis host and port e.g. `192.168.99.100:6379`
+- `fn deploy create --local`
+- `fn deploy read --local`
+- set key in Redis `curl -d '{"key":"foo", "val":"bar"}' http://localhost:8080/r/fnredis/create`
+	- you'll see an output similar to `Redis SET result - OK. Jedis object hash code - 2025269734` (notice the `Jedis` hash code - it will be the same across different invocations, thanks to `hot functions`)
+- get value (above key) from Redis - `curl -d 'foo' http://localhost:8080/r/fnredis/read`
+	- you'll see an output similar to `value for key foo is bar[Wed Jul 10 15:26:32 UTC 2018]` (the content between `[]` is the time when the key was added)
+
