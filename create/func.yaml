@@ -1,7 +1,7 @@
 name: create
-version: 0.0.31
+version: 0.0.32
 runtime: java
-cmd: com.simplydistibuted.fn.RedisSetFunction::set
+cmd: com.wordpress.simplydistributed.fnex.RedisSetFunction::set
 build_image: fnproject/fn-java-fdk-build:jdk9-1.0.63
 run_image: fnproject/fn-java-fdk:jdk9-1.0.63
 format: http

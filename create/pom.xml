@@ -7,7 +7,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <fdk.version>1.0.63</fdk.version>
     </properties>
-    <groupId>com.simplydistributed.fn</groupId>
+    <groupId>com.wordpress.simplydistributed</groupId>
     <artifactId>fn-redis-set</artifactId>
     <version>1.0.0</version>
 

@@ -1,4 +1,4 @@
-package com.simplydistibuted.fn;
+package com.wordpress.simplydistributed.fnex;
 
 import java.util.Date;
 import redis.clients.jedis.Jedis;
