@@ -3,8 +3,8 @@
 - start Redis `docker run -it --rm --name redis -p 6379:6379 redis`
 - update `config` section in `func.yaml` for `create` and `read` apps to specify Redis host and port e.g. `192.168.99.100:6379`
 - `cd fn-redis-example`
-- `fn deploy create --local`
-- `fn deploy read --local`
+- `fn deploy create --local --app fnredis`
+- `fn deploy read --local --app fnredis`
 - set key in Redis `curl -d '{"key":"foo", "val":"bar"}' http://localhost:8080/r/fnredis/create`
 	- you'll see an output similar to `Redis SET result - OK. Jedis object hash code - 2025269734` (notice the `Jedis` hash code - it will be the same across different invocations, thanks to `hot functions`)
 - get value (above key) from Redis - `curl -d 'foo' http://localhost:8080/r/fnredis/read`
