@@ -2,6 +2,7 @@
 - `export FN_API_URL=http://localhost:8080` //if you're using Docker Tools on Windows, this might be `http://192.168.99.100:8080`
 - start Redis `docker run -it --rm --name redis -p 6379:6379 redis`
 - update `config` section in `func.yaml` for `create` and `read` apps to specify Redis host and port e.g. `192.168.99.100:6379`
+- `cd fn-redis-example`
 - `fn deploy create --local`
 - `fn deploy read --local`
 - set key in Redis `curl -d '{"key":"foo", "val":"bar"}' http://localhost:8080/r/fnredis/create`
